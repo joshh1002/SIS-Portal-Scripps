@@ -1,0 +1,737 @@
+/* =========================================================
+   SCRIPPS COLLEGE STUDENT PORTAL
+   ========================================================= */
+
+
+
+
+/* ---------------------------------------------------------
+   Home Page
+   --------------------------------------------------------- */
+
+/*Remove help button at bottom of page*/
+#_ctl0_Footer1_btnHelp {
+    display: none;
+}
+
+/*Remove "Personalize" and "Help" button at top of page*/
+#_ctl0_cphHeader_Header1_lnkWPEdit,
+#_ctl0_cphHeader_Header1_lnkHelp {
+    display: none !important;
+}
+
+/*Hide News Center Tile
+#_ctl1_P_News1_newsImage,
+#_ctl1_P_News1_lblNewsCenter {
+    display: none;
+}*/
+
+/*Remove Financials tile from home page
+#_ctl0_cphBody_StudTilebasedPage_DataList1__ctl1__ctl0_divLoadDetails,
+#_ctl0_cphBody_StudTilebasedPage_DataList1__ctl1__ctl0_title {
+    display: none !important;
+}*/
+
+
+
+
+
+/* ---------------------------------------------------------
+   5C COURSE SCHEDULE
+   --------------------------------------------------------- */
+
+/*** Course Schedule ***/
+
+/*Hide Campus search option on Student 5C course schedule search*/
+#_ctl0_PlaceHolderMain_CourseScheduleSearch1_lblCampus,
+#_ctl0_PlaceHolderMain_CourseScheduleSearch1_cbCampus {
+    display: none;
+}
+
+/*Edit Course Attributes search to be bold and and add required tag*/
+#_ctl0_PlaceHolderMain_CourseScheduleSearch1_lblCourseAttribute {
+    font-size: 0;
+    display: inline-block;
+}
+
+#_ctl0_PlaceHolderMain_CourseScheduleSearch1_lblCourseAttribute::after {
+    content: 'Course Attribute *(Required)';
+    font-size: 18px;
+    color: #000000;
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*Hide Prerequisites and Corequisites on 5C course schedule course detail page*/
+#_ctl0_PlaceHolderMain_lblPreReqs,
+#_ctl0_PlaceHolderMain_lblNoReqs,
+#_ctl0_PlaceHolderMain_lblCoReqs,
+#_ctl0_PlaceHolderMain_lblNoCoReqs {
+    display: none;
+}
+
+/* ---------------------------------------------------------
+   Academics
+   --------------------------------------------------------- */
+
+/*** Unoffical Transcript ***/
+
+/*** Degree Audit ***/
+
+/*Remove illustration on Degree Audit Page on student portal*/
+#secure-student-acad-degreeaudit .contentpart .Top_content_header .panel-heading:after {
+    background-image: none !important;
+}
+
+/*Remove SPE Progression column from Course list section on Student Portal Degree Audit*/
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CourseList1_dgCourse th:nth-child(9),
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CourseList1_dgCourse td:nth-child(9) {
+    display: none !important;
+}
+
+/*Remove SPE Progression column from Courses Not Applied section on Student Portal Degree Audit*/
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CoursesTakenNotApplied1_dgCoursesNotInProgram th:nth-child(8),
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CoursesTakenNotApplied1_dgCoursesNotInProgram td:nth-child(8) {
+    display: none !important;
+}
+
+/*Remove legend on Student Portal Degree Audit Page*/
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CourseList1_lblCourseProgressionLegend,
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CoursesTakenNotApplied1_lblCourseProgressionLegend {
+    display: none !important;
+}
+
+/*Reomove Change Programs/Areas of Study section on Student portal degree audit.*/
+#divHypoButtonHeader,
+#_ctl0_PlaceHolderMain__ctl0_imgHypo,
+#_ctl0_PlaceHolderMain__ctl0_lblChangeProgramOrAreasStudy,
+#_ctl0_PlaceHolderMain__ctl0_pnlHypoButton {
+    display: none;
+}
+
+
+
+/*** My Class Schedule ***/
+
+/*Remove illustration on the my class schedule page*/
+#secure-student-acad-classschedule .contentpart .Top_content_header .panel-heading:after {
+    background-image: none !important;
+}
+
+/*Hide column on portal (e.g., column 1) in the class schedule*/
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid th:nth-child(10),
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid th:nth-child(11),
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid th:nth-child(12),
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid td:nth-child(10),
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid td:nth-child(11),
+#_ctl0_PlaceHolderMain_classSchedule_CMCClassScheduleDataGrid td:nth-child(12) {
+    display: none !important;
+}
+
+/*Increase font for "Projected/Estimated Term GPA N/A" (Not sure exactly where this one goes)*/
+#_ctl0_PlaceHolderMain__109_109932_lbProjEstTermGpa {
+    visibility: hidden !important;
+    position: relative;
+}
+
+#_ctl0_PlaceHolderMain__109_109932_lbProjEstTermGpa::after {
+    content: 'Projected/Estimated Term GPA N/A';
+    font-size: 16px;
+    color: #040404;
+    display: inline-block;
+    font-weight: bold;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+}
+
+
+/*** GPA Calculator ***/
+
+
+/*Remove columns from GPA Calculator*/
+
+#_ctl0_PlaceHolderMain__109_122483_dgCalculator th:nth-child(8),
+#_ctl0_PlaceHolderMain__109_122483_dgCalculator td:nth-child(8),
+#_ctl0_PlaceHolderMain__109_122483_dgCalculator th:nth-child(7),
+#_ctl0_PlaceHolderMain__109_122483_dgCalculator td:nth-child(7)  {
+    display: none;
+}
+
+/*Rename "Cr" column to "Credits" on Student my class schedule page
+th[aria-label="Cr: activate to sort column ascending"] span {
+    visibility: hidden;
+    position: relative;
+}
+
+th[aria-label="Cr: activate to sort column ascending"] span::after {
+    content: 'Credits';
+    visibility: visible;
+    position: absolute;
+}*/
+
+/*** Degree Pathways ***/
+
+
+/*** My Grades ***/
+
+/*Remove numeric grade column from student portal My Grades grid*/
+#_ctl0_PlaceHolderMain_MyGradesCtrl_grdGrades th:nth-child(5),
+#_ctl0_PlaceHolderMain_MyGradesCtrl_grdGrades td:nth-child(5) {
+    display: none;
+}
+
+/*Rename "Enrollment Cum.Gpa" to "Enrollment Cumulative GPA" student portal My Grades Grid*/
+#_ctl0_PlaceHolderMain_MyGradesCtrl_lblCumGPA {
+    font-size: 0;
+    display: inline-block;
+}
+
+#_ctl0_PlaceHolderMain_MyGradesCtrl_lblCumGPA::after {
+    content: 'Enrollment Cumulative GPA';
+    font-size: 18px;
+}
+
+/*Rename subheader text from "Grades" to "Final Grades" student portal my grades*/
+#_ctl0_PlaceHolderMain_MyGradesCtrl_lblGradesHeading {
+    visibility: hidden;
+    position: relative;
+}
+
+#_ctl0_PlaceHolderMain_MyGradesCtrl_lblGradesHeading::after {
+    content: 'Final Grades';
+    visibility: visible;
+    position: absolute;
+    left: 0;
+}
+
+/*** 5C Registration ***/
+
+/*Remove shift column from student registration page selected course section*/
+[aria-label="Shift: activate to sort column ascending"] {
+    display: none  !important;
+}
+
+[id*="lblShift"] {
+    display: none. !important;
+}
+
+/*Remove column from student registration page selected courses section.
+#s1_g1 th:nth-child(15),
+#s1_g1 td:nth-child(15) {
+  display: none !important;
+}*/
+
+
+
+/*** Advisor Clearance Request ***/
+
+/*** Course Approval Status ***/
+
+
+
+
+/* ---------------------------------------------------------
+   My Profile
+   --------------------------------------------------------- */
+
+/*** My Calendar ***/
+
+/*** My Message Center ***/
+
+/*** My Information ***/
+
+/*Remove illustration on student my information page*/
+#secure-student-prof-my_profile .contentpart .Top_content_header .panel-heading:after {
+    background-image: none !important;
+}
+
+/*Remove "Required Field" text on student my information page*/
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblReqMessage_lblRequired {
+    display: none;
+}
+
+.fa.fa-star.text-danger {
+    display: none !important;
+}
+
+/*Hide Students Name on My Information Tab*/
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblTitle,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbFirstName,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblFirstName,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbLastName,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblLastName,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbMiddleInit,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbMiddleInitial {
+    display: none;
+}
+
+/*Hide Addresses Tab on Student My Information Page*/
+#_ctl0_PlaceHolderMain_tabAddresses {
+    display: none;
+}
+
+/*Hide Enrollment ID and EX Interest on student My Informationk*/
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblEnrollmentId,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_txtEnrollmentID,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblExtraCurricularInterest,
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbExtracurricularStatus {
+    display: none;
+}
+
+/*Move Other Columns on Student My Information Tab to Top of Page*/
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblDOB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    /* optional for spacing */
+    background-color: white;
+    /* optional for readability */
+    z-index: 1000;
+    /* make sure itÃ¢â‚¬â„¢s above other elements */
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbDOB {
+    position: absolute;
+    top: 40px;
+    /* slightly below the label's top: 0 */
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblStudentId {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_txtStudentID {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblStatus {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_txtStatus {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lblResidencyStatus {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#_ctl0_PlaceHolderMain_Mypersonalinfo2_lbResidencyStatus {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+/*My Information change request page title
+#lblPageTitle {
+    visibility: hidden;
+    position: relative;
+}
+
+#lblPageTitle::after {
+    content: 'Please submit information request change to the Registrar Office';
+    visibility: visible;
+    position: absolute;
+    left: 0;
+}*/
+
+
+/*** Privacy Information ***/
+
+/*Hide FERPA Opt In Checkboxes*/
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_0,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_1,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_2,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_3,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_4,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_5,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_6,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_7,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_8,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_9,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_10,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_11,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_12,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_13,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_14,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_chklCMFerpaDirFields_15 {
+    display: none;
+}
+
+/*Remove FERPA Opt In Action Buttons*/
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_btnAll,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_btnUncheckAll,
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_lbtnSubmit {
+    display: none;
+}
+
+/*Change Opt In Page Description*/
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_lblFerpaOptions {
+    font-size: 0;
+}
+
+#_ctl0_PlaceHolderMain_ucFerpaOptOut_lblFerpaOptions::after {
+    content: "Directory Information: Scripps College defines directory information in accordance with the Family Educational Rights and Privacy Act of 1974 (FERPA) to include the following:";
+    font-size: 14px;
+}
+
+#_ctl0_PlaceHolderMain_ucFerpaConsent_lnkbAddNewPerson {
+    display: none;
+}
+
+/*Hide edit column on FERPA consent page*/
+th:nth-child(11),
+td:nth-child(11) {
+    display: none;
+}
+
+
+
+/* ---------------------------------------------------------
+   My Student Account
+   --------------------------------------------------------- */
+
+
+/*** Account Information ***/
+
+/* Hide Payment schedule Tab on Account Information*/
+#_ctl0_PlaceHolderMain_tabPaymentSchedule {
+    display: none !important;
+}
+
+/* Hide Next Payment Amount link - when no payment schedule */
+#_ctl0_PlaceHolderMain_lnkNextPaymentAmount,
+#_ctl0_PlaceHolderMain_btnTotalPayments,
+#_ctl0_PlaceHolderMain_lblInfo1,
+#_ctl0_PlaceHolderMain_btnPayNowlink,
+#_ctl0_PlaceHolderMain_lblInfo4 {
+    display: none !important;
+}
+
+/*** Link to Account ***/
+
+
+/*Change photo on my student account link to account page
+#_ctl0_PlaceHolderMain_imgLinks {
+    display: none !important;
+}*/
+
+
+/* ---------------------------------------------------------
+   My Documents
+   --------------------------------------------------------- */
+
+
+/*** Document Center ***/
+
+/*Rename column on document center from "Due Date/Template" to " Document to Complete"*/
+#_ctl0_PlaceHolderMain_dgMyDocuments__ctl1_lblDueDate_Header {
+    visibility: hidden;
+    position: relative;
+}
+
+#_ctl0_PlaceHolderMain_dgMyDocuments__ctl1_lblDueDate_Header::after {
+    content: 'Documents to Complete';
+    visibility: visible;
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+  External Links
+   --------------------------------------------------------- */
+
+/*** Bookstore ***/
+
+
+
+
+
+
+
+/* =========================================================
+   SCRIPPS COLLEGE FACULTY PORTAL
+   ========================================================= */
+
+
+
+/* ---------------------------------------------------------
+   Home Page
+   --------------------------------------------------------- */
+
+/*Hide rows on Faculty Portal Homepage Course tile
+#_ctl1_Classes1_grdClasses__ctl0_lblPostAssignExam,
+#_ctl1_Classes1_grdClasses__ctl0_CmcLinkButton2,
+#_ctl1_Classes1_grdClasses__ctl0_CmcImageButton2,
+#_ctl1_Classes1_grdClasses__ctl0_CMCLinkButton1,
+#_ctl1_Classes1_grdClasses__ctl0_CMCImageButton1,
+#_ctl1_Classes1_grdClasses__ctl0_lblAttendanceDue {
+    display: none;
+}*/
+
+
+/* ---------------------------------------------------------
+   5C COURSE SCHEDULE
+   --------------------------------------------------------- */
+
+
+/*** Course Search ***/
+
+
+
+
+
+/* ---------------------------------------------------------
+   My Profile
+   --------------------------------------------------------- */
+
+/*** My Information ***/
+
+
+
+
+
+/* ---------------------------------------------------------
+   My Advisees
+   --------------------------------------------------------- */
+
+/*** Student Information ***/
+
+/*Remove Secondary Email on My Advisees page*/
+#_ctl0_PlaceHolderMain_CMCLabel24,
+#_ctl0_PlaceHolderMain_hpSecondEmail {
+    display: none;
+}
+
+/*Rename Student Search
+#_ctl1_pagetitle_StudentSearchRecentList1_lnkFindAStudent {
+  font-size: 0; 
+  display: inline-block;
+}
+
+#_ctl1_pagetitle_StudentSearchRecentList1_lnkFindAStudent {
+  content: 'Find Advisees';
+  font-size: 16px; 
+  color: #060000;
+  display: inline-block;
+}*/
+
+
+/*** Student Schedule ***/
+
+
+/*** Degree Audit ***/
+
+
+/*Hide SPE Progression Column on faculty portal DPA*/
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CourseList1_dgCourse th:nth-child(10),
+#_ctl0_PlaceHolderMain__ctl0_Dpa_CourseList1_dgCourse td:nth-child(10) {
+    display: none;
+}
+
+
+/*** Student Unofficial Transcript ***/
+
+
+/*** Academic Advisor Clearance ***/
+
+
+
+
+
+
+/* ---------------------------------------------------------
+   My Classes
+   --------------------------------------------------------- */
+
+
+/*** My Class Schedule ***/
+
+
+/*** Final Grades ***/
+
+
+/*Change the text of Final Grades tab*/
+#_ctl0_PlaceHolderMain_lblMyFinalGrades {
+    font-size: 0;
+    display: inline-block;
+}
+
+#_ctl0_PlaceHolderMain_lblMyFinalGrades::after {
+    content: 'Click Here to Enter Final Grades';
+    font-size: 16px;
+    color: #fefcfc;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+/*Hide Numeric Grade on Second Page of Gradebook*/
+#_ctl0_PlaceHolderMain_MyFinalGrades_finalGrades th:nth-child(3),
+#_ctl0_PlaceHolderMain_MyFinalGrades_finalGrades td:nth-child(3),
+#_ctl0_PlaceHolderMain_MyFinalGrades_finalGrades th:nth-child(2),
+#_ctl0_PlaceHolderMain_MyFinalGrades_finalGrades td:nth-child(2) {
+    display: none;
+}
+
+/*Hide Assignments and Exams on Final Grades*/
+#_ctl0_PlaceHolderMain_lblUngradedLesson,
+#_ctl0_PlaceHolderMain_lblRostersDue {
+    display: none;
+}
+
+/*Hide Gradebook Envelope to Email Class on final grades*/
+#imgId {
+    display: none;
+}
+
+
+/*** Approval Request ***/
+
+
+/*** Academic Advisory Notices ***/
+
+
+/*** Class Roster ***/
+
+
+
+
+
+/* =========================================================
+   Global Background
+   ========================================================= */
+
+html {
+    --primary: #2c6ca6 !important;
+    /* used on: accent bar below page and tile titles, text link color, left menu hover border color, mobile menu button background color, open mobile menu bottom border, pop-up border on alerts/holds/appointments, active tab background color, content subheading text color, homepage carousel active item, landing page (pre-login) tile border on hover, registration bottom border, active tab bottom border color, border on class details box on schedule */
+    --secondary: #002546 !important;
+    /* used on: global button background hover state w/ white text, including quick links, logout, help buttons, section header text color on white or light gray background */
+    --accent: #ffc20e !important;
+    /* used on: global button background default state w/ black text, mobile menu button hover background color, active left menu item right border, registration non-current step background color w/ black text, registration current term text on dark gray background, */
+    --gray: #6c757d !important;
+    /* used on: left menu primary links, left active submenu background color w/ white links, background of class details box on schedule, background on faculty portal student search box w/ white text */
+    --gray-dark: #343a40 !important;
+    /* used on: text color in table headers on white background */
+    --focus-color: #75bdb9;
+    /* used on: focus ring around interactive elements when navigating via keyboard (WCAG) */
+    --success: #d9f7d5 !important;
+    /* used on: background color of success messages */
+    --info: #17a2b8 !important;
+    /* used on special CTA button background color (registration button for example), refresh button icon background, registration current step */
+    --warning: #fff5bf !important;
+    /* used on: background color of important messages */
+    --danger: #dc3545 !important;
+    /* used on: background color of success messages */
+    --dark: #343a40 !important;
+    /* used on: panel heading background color w/ white text */
+    --font-family-sans-serif: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    /* used on: main body text */
+    --font-serif: "Tiempos Headline", Georgia, serif !important;
+    /* used on: header text */
+}
+
+
+/* CLASSES ADDED POST 21 */
+
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus {
+    background-color: #114269 !important;
+    color: #ffffff !important;
+}
+
+
+#classCalendalPanel .panel-title>a {
+    color: #ffffff !important;
+    text-decoration: none;
+    background-color: #337ab7;
+    font-size: 16px;
+}
+
+#classCalendalPanel .panel-heading a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    transition: all 0.5s;
+}
+
+#classCalendalPanel .panel-title a[aria-expanded="true"]:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.confirmMsg {
+    color: #ffffff;
+}
+
+.modal-content {
+    border-style: solid !important;
+    border-width: thick !important;
+    border-color: darkgray !important;
+}
+
+/*Remove configuration tab*/
+#_ctl0_PlaceHolderMain_lblConfiguration,
+#_ctl0_PlaceHolderMain_btnConfiguration {
+    display: none;
+}
+
+
+
+
+
+
+/*<img id="_ctl0_PlaceHolderMain_imgLinks" class="center" src="/CMCPortal/Public/301019-Tst-9-Scripps/images/links/links.jpg" alt="Image of External Link Launch Banner" border="0" style="width:100%;">
+
+
+/wp-content/uploads/100SC-Stacked-GREEN-3.png*/
